@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import Product from './Product'
 import Title from './Title'
 import {storeProducts} from '../data'
+import Consumer from '../context'
 
 class ProductList extends Component{
     state = {
@@ -25,6 +26,13 @@ class ProductList extends Component{
                     <Title name="our" title="products"/>
                         <div className="row">
                             <Product></Product>
+                            <Consumer>
+                                {el=>{
+                                    return el.products.map(product=>{
+                                        return <Product key={product.id} title={product.title}></Product>
+                                    })
+                                }}  
+                            </Consumer>
                         </div>
                     
                     </div>
