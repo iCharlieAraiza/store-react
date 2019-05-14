@@ -25,12 +25,12 @@ class ProductList extends Component{
                     
                     <Title name="our" title="products"/>
                         <div className="row">
-                            <Product></Product>
+
                             <Consumer>
                                 {el=>{
-                                    return el.products.map(product=>{
-                                        return <Product key={product.id} title={product.title}></Product>
-                                    })
+                                   return el.products.map(product=>{
+                                       return <Product product={product}/>
+                                   })
                                 }}  
                             </Consumer>
                         </div>
