@@ -29,7 +29,7 @@ class ProductList extends Component{
                             <Consumer>
                                 {el=>{
                                    return el.products.map(product=>{
-                                       return <Product product={product}/>
+                                       return <Product key={product.id} product={product}/>
                                    })
                                 }}  
                             </Consumer>

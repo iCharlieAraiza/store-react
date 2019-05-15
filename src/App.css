@@ -25,3 +25,22 @@ body{
 .text-bright{
   color: var(--lightBLue);
 }
+
+.product-wrapper .card{
+  border-color: transparent;
+  transition: all 0.4s linear; 
+}
+
+.product-wrapper .card-footer{
+  background-color: transparent;
+  border-top: transparent;
+}
+
+.product-wrapper .card:hover{
+  border:0.04rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+}
+
+.product-wrapper .card-footer:hover{
+  background: rgba(247,247,247,0.8)
+}
